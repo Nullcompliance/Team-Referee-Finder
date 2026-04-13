@@ -4,8 +4,27 @@ class Team {
         this.location = location;
         this.colour = colour;
     }
-}
 
+    addTeam() {
+        teamList.push(this)
+    }
+}
+const teamList = []
+const leftBar = document.querySelector(".leftBar")
+const centerScreen = document.querySelector(".centerScreen")
 const btn = document.getElementById("newBtn")
 
-btn.addEventListener("click", () => {btn.classList.toggle("new")})
+function createInputField(text) {
+    const input = document.createElement("input");
+    input.textContent = text;
+    return input;
+}
+
+createQuery = function createQuery() {
+    centerScreen.replaceChildren()
+
+    centerScreen.appendChild(createInputField("HI"))
+}
+
+btn.addEventListener("click", createQuery)
+

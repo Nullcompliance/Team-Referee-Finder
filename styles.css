@@ -62,18 +62,17 @@ html, body {
 
 .centerScreen {
     display: grid;
-     background-color: #CCCCCC;
+    background-color: #CCCCCC;
+
+    grid-auto-rows: 15%;
+    gap: 5px;
+    overflow-y: auto;
 }
 
-.container {
-    display: grid;
-    background-color: #9e0000;
-}
-
-.container div {
-  background-color: #1f1f1f;
-  border: 1px solid rgb(200, 200, 200);
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
+.centerScreen input {
+    color: #0d0d0d;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
