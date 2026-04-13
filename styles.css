@@ -1,0 +1,79 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.main {
+    display: grid;
+    background-color: #9e0000;
+    grid-template-columns: 3fr 7fr;
+    grid-auto-flow: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.leftBar {
+    display: grid;
+    grid-auto-flow: row;
+
+    grid-auto-rows: 15%;
+    background-color: #555;
+    gap: 5px;
+    overflow-y: auto;
+
+    /* Firefox */
+    scrollbar-width: none;
+
+    /* IE / old Edge */
+    -ms-overflow-style: none;
+}
+
+.leftBar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.leftBar button {
+    color: #CCCCCC;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 2px solid #9e0000;
+}
+
+.leftBar button:hover {
+    border: 2px solid #bbbb0b;
+}
+
+.leftBar .new{
+    border: 2px solid #0f842c;
+}
+
+.leftBar .new:hover{
+    border: 2px solid #00ff40;
+}
+
+
+
+.centerScreen {
+    display: grid;
+     background-color: #CCCCCC;
+}
+
+.container {
+    display: grid;
+    background-color: #9e0000;
+}
+
+.container div {
+  background-color: #1f1f1f;
+  border: 1px solid rgb(200, 200, 200);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
