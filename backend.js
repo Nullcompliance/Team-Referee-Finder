@@ -10,9 +10,11 @@ class Team {
     }
 }
 const teamList = []
-const leftBar = document.querySelector(".leftBar")
-const centerScreen = document.querySelector(".centerScreen")
-const btn = document.getElementById("newBtn")
+const leftBar = document.querySelector(".leftBar");
+const overlay = document.querySelector(".parent");
+const newBtn = document.getElementById("newBtn");
+const exitBtn = document.getElementById("exitForm");
+const form = document.querySelector("form");
 
 function createInputField(text) {
     const input = document.createElement("input");
@@ -20,11 +22,14 @@ function createInputField(text) {
     return input;
 }
 
-createQuery = function createQuery() {
-    centerScreen.replaceChildren()
-
-    centerScreen.appendChild(createInputField("HI"))
+activateOverlay = function activateOverlay() {
+    form.reset();
+    overlay.style.display = "flex";
 }
 
-btn.addEventListener("click", createQuery)
+stopOverlay = function stopOverlay() {
+    overlay.style.display = "none";
+}
 
+newBtn.addEventListener("click", activateOverlay);
+exitBtn.addEventListener("click", stopOverlay);
